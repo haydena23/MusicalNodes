@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Musical Nodes</title>
+    <meta name="description" content="Graph visualizer for finding artists" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/2.7.10/cytoscape.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body style="background-color: #1ed760;">
+    <div id="logo">
+      <img src="images/logo.png" class="Spotify Logo"/>
+    </div>
+    <h1>Musical Nodes</h1>
+    <h3>Display related artists using the Spotify API</h3>
+    <h5>CS445 Networks Project, Spring 2022</h5>
+    <h5>By Tony Hayden, Kai Vickers, Connor Morgan, Geryl Vinoya</h5>
+    <a href="https://github.com/haydena23/haydena23.github.io" style='font-size: smaller;'>Check it out on GitHub!</a>
+    <form>
+      <label for="search">SEARCH</label>
+      <input type="text" id="searchField" placeholder="Spotify Artist Name"/>
+      <button type="button" id="searchButton">ENTER</button>
+      <button type="button" id="reset">RESET</button>
+    </form>
+    <section>
+      <div id="cy" style="border: 5px solid black;"></div>
+    </section>
+    <section>
+      <div id="bio">
+        <h2 id="artist">Artist</h2>
+        <button type="button" id="locate">LOCATE</button>
+        <button type="button" id="isolate">ISOLATE NODE</button>
+        <h5>Followers:</h5>
+        <p id="foll"></p>
+        <h5>Genres:</h5>
+        <p id="genr"></p>
+        <h5>Relative Popularity (0-100):</h5>
+        <p id="pop"></p>
+        <h5>Spotify URI link:</h5>
+        <a id="uri" href="">Link</a>
+        <h5>Artist Image:</h5>
+        <img id="img" src="" width="" height="">
+      </div>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>
